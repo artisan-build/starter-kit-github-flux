@@ -1,12 +1,21 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/livewire-starter-kit",
+    "name": "laravelstarterkits/livewire-github-exclusive",
     "type": "project",
-    "description": "The official Laravel starter kit for Livewire.",
+    "description": "A Livewire starter kit for Laravel that exclusively ues GitHub for authentication.",
     "keywords": [
-        "laravel",
-        "framework"
+        "livewire",
+        "socialite"
     ],
+    "authors": [
+        {
+            "name": "edgrosvenor",
+            "email": "ed@artisan.build",
+            "homepage": "https://community.artisan.build",
+            "role": "Developer"
+        }
+    ],
+
     "license": "MIT",
     "require": {
         "php": "^8.2",
