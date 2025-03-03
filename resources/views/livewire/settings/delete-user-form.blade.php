@@ -16,7 +16,15 @@ new class extends Component {
             'password' => ['required', 'string', 'current_password'],
         ]);
 
-        tap(Auth::user(), $logout(...))->delete();
+        $user = Auth::user();
+
+        throw_if (!$user instanceof \App\Models\User, __('An unknown error has occurred'));
+
+        tap($user, $logout(...))->update([
+            'name' => __('Deleted Account'),
+            'email' => 'deleted+' . \Illuminate\Support\Facades\Hash::make($user->email) . '@example.com',
+            'avatar_url' => null,
+        ]);
 
         $this->redirect('/', navigate: true);
     }

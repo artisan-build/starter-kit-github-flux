@@ -2,14 +2,24 @@
 
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 use Livewire\Volt\Volt;
 
 Route::middleware('guest')->group(function () {
-    Volt::route('login', 'auth.login')
-        ->name('login');
+    Route::get('/auth/redirect', function () {
+        return Socialite::driver('github')->redirect();
+    })->name('github.redirect');
 
-    Volt::route('register', 'auth.register')
-        ->name('register');
+
+
+    Route::get('/auth/callback', function () {
+        $user = Socialite::driver('github')->user();
+
+
+
+        // $user->token
+
+    })->name('github.callback');
 
     Volt::route('forgot-password', 'auth.forgot-password')
         ->name('password.request');

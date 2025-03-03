@@ -1,17 +1,19 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravelstarterkits/livewire-github-exclusive",
+    "name": "artisan-build/starter-kit-github-flux",
     "type": "project",
-    "description": "A Livewire starter kit for Laravel that exclusively ues GitHub for authentication.",
+    "description": "A Livewire starter kit for Laravel that ues GitHub for authentication.",
     "keywords": [
         "livewire",
-        "socialite"
+        "socialite",
+        "flux",
+        "blade"
     ],
     "authors": [
         {
-            "name": "edgrosvenor",
+            "name": "Ed Grosvenor",
             "email": "ed@artisan.build",
-            "homepage": "https://community.artisan.build",
+            "homepage": "https://artisan.community",
             "role": "Developer"
         }
     ],
